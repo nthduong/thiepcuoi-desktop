@@ -317,6 +317,13 @@ input:-webkit-autofill {
   align-items: center;
   justify-content: center;
   position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+@media (max-width: 767.98px) {
+  .hero {
+    height: 80vh;
+    clip-path: initial;
+  }
 }
 .hero__content {
   display: flex;
@@ -327,29 +334,56 @@ input:-webkit-autofill {
   z-index: 1;
   position: relative;
 }
+@media (max-width: 767.98px) {
+  .hero__content {
+    gap: 20px;
+  }
+}
 .hero__text {
   font-size: 2.4rem;
   color: #fff;
+}
+@media (max-width: 767.98px) {
+  .hero__text {
+    font-size: 1.8rem;
+  }
 }
 .hero__title {
   font-size: 8rem;
   font-weight: bold;
   color: #fff;
 }
+@media (max-width: 767.98px) {
+  .hero__title {
+    font-size: 3.4rem;
+  }
+}
 .hero__subtitle {
   font-size: 2.4rem;
   color: #fff;
+}
+@media (max-width: 767.98px) {
+  .hero__subtitle {
+    font-size: 1.8rem;
+  }
 }
 .hero__cta {
   padding: 16px 52px;
   border: 1px solid #fff;
   background-color: transparent;
   font-size: 2.4rem;
+  border-radius: 20px;
   color: #fff;
 }
 .hero__cta:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
+}
+@media (max-width: 767.98px) {
+  .hero__cta {
+    margin-top: 40px;
+    font-size: 1.8rem;
+  }
 }
 
 .couple {
@@ -357,19 +391,81 @@ input:-webkit-autofill {
   position: relative;
   z-index: 1;
 }
+@media (max-width: 767.98px) {
+  .couple {
+    margin-top: -60px;
+  }
+}
 .couple__media {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  gap: 10px;
+  gap: 20px;
+  position: relative;
   justify-content: space-between;
+}
+@media (max-width: 767.98px) {
+  .couple__media {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+}
+.couple__media::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("/images/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+@media (max-width: 767.98px) {
+  .couple__media::before {
+    width: 40px;
+    height: 40px;
+  }
+}
+.couple__media::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 767.98px) {
+  .couple__media::after {
+    width: 70px;
+    height: 70px;
+  }
 }
 .couple__img-wrap {
   width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 20px solid #fff;
+  background-color: #fff;
+}
+@media (max-width: 767.98px) {
+  .couple__img-wrap {
+    border: 10px solid #fff;
+  }
 }
 .couple__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border: 20px solid #fff;
+  border-radius: 20px;
+  display: block;
 }
 .couple__content {
   margin-top: 40px;
@@ -379,17 +475,33 @@ input:-webkit-autofill {
   align-items: center;
   gap: 40px;
 }
+@media (max-width: 767.98px) {
+  .couple__content {
+    gap: 20px;
+  }
+}
 .couple__heading {
   font-size: 4.4rem;
   font-weight: 700;
   color: #ee8584;
 }
+@media (max-width: 767.98px) {
+  .couple__heading {
+    font-size: 3.4rem;
+  }
+}
 .couple__desc {
   font-family: "Open Sans", sans-serif;
   text-align: center;
   font-size: 1.8rem;
-  width: 90%;
+  width: 75%;
   color: rgb(115, 119, 123);
+}
+@media (max-width: 767.98px) {
+  .couple__desc {
+    width: 100%;
+    font-size: 1.4rem;
+  }
 }
 .couple__name {
   margin-top: 20px;
@@ -397,12 +509,22 @@ input:-webkit-autofill {
   font-weight: 400;
   font-size: 3.8rem;
 }
+@media (max-width: 767.98px) {
+  .couple__name {
+    font-size: 3.4rem;
+  }
+}
 
 .parrent {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 120px;
+}
+@media (max-width: 767.98px) {
+  .parrent {
+    gap: 20px;
+  }
 }
 .parrent__info {
   gap: 10px;
@@ -415,6 +537,16 @@ input:-webkit-autofill {
 .parrent__name strong {
   font-weight: 700;
   font-size: 1.8rem;
+}
+@media (max-width: 767.98px) {
+  .parrent__name strong {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .parrent__name {
+    font-size: 1.2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

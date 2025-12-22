@@ -37,7 +37,10 @@
             <div class="slideshow">
                 <div class="slideshow__inner">
                     <div class="slideshow__item">
-                        <img class="slideshow__img" src="images/banner-1.jpeg" alt="Hero Image 1" />
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/banner-mobile.jpeg" />
+                            <img class="slideshow__img" src="images/banner-1.jpeg" alt="Hero Image 1" />
+                        </picture>
                     </div>
                 </div>
                 <div class="slideshow__content"></div>
