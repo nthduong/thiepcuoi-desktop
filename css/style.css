@@ -782,4 +782,29 @@ input:-webkit-autofill {
   }
 }
 
+.album {
+  padding: 80px 0;
+}
+.album__inner {
+  text-align: center;
+}
+.album__heading {
+  font-size: 4.4rem;
+  margin-bottom: 40px;
+  color: #ee8584;
+}
+@media (max-width: 767.98px) {
+  .album__heading {
+    font-size: 3rem;
+  }
+}
+.album__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.album__image {
+  width: 100%;
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */
