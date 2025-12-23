@@ -158,11 +158,13 @@
 
 .couple {
     margin-top: -150px;
+    margin-bottom: 80px;
     position: relative;
     z-index: 1;
 
     @include screen(md) {
         margin-top: -60px;
+        margin-bottom: 20px;
     }
     &__media {
         width: 80%;
@@ -278,6 +280,33 @@
             font-size: 3.4rem;
         }
     }
+
+    &__bottom {
+        width: 100%;
+    }
+
+    &__main-img-wrap {
+        width: 76%;
+        padding-top: 40%;
+        position: relative;
+        margin: 40px auto;
+        border-radius: 20px;
+
+        @include screen(md) {
+            width: 100%;
+            padding-top: 60%;
+        }
+    }
+
+    &__main-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
 }
 
 .parrent {
@@ -308,6 +337,104 @@
 
         @include screen(md) {
             font-size: 1.2rem;
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        font-size: 1.8rem;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+}
+
+.location {
+    background: $primary-color1;
+    padding: 80px 0;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__heading {
+        font-size: 4.4rem;
+        font-weight: 700;
+        color: #fff;
+
+        @include screen(md) {
+            font-size: 3.4rem;
+        }
+    }
+
+    &__desc {
+        margin-top: 20px;
+        font-size: 1.8rem;
+        text-align: center;
+        width: 60%;
+        color: #fff;
+        @include screen(md) {
+            width: 100%;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__list {
+        margin-top: 40px;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        gap: 20px;
+
+        @include screen(md) {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+    }
+}
+
+.location-item {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 40px;
+    border-radius: 20px;
+
+    &__title {
+        font-size: 2.6rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: $primary-color1;
+    }
+
+    &__desc {
+        color: $desc-color;
+        margin-bottom: 20px;
+        font-weight: 600;
+        align-self: start;
+
+        @include screen(md) {
+            align-self: start;
+        }
+    }
+
+    &__btn {
+        padding: 14px 44px;
+        border-radius: 20px;
+        color: $primary-color1;
+        border: 1px solid $primary-color1;
+        background-color: transparent;
+        transition: all 0.25s ease;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid $primary-color1;
+            background-color: $primary-color1;
+            color: #fff;
         }
     }
 }
