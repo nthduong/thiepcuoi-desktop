@@ -23,10 +23,10 @@
         flex-shrink: 0;
         &::after {
             content: "";
-            background: #fff;
+            background: #000;
             position: absolute;
             inset: 0;
-            opacity: 0.1;
+            opacity: 0.3;
         }
     }
 
@@ -57,18 +57,17 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 40px;
         z-index: 1;
         position: relative;
 
         @include screen(md) {
-            gap: 20px;
         }
     }
 
     &__text {
         font-size: 2.4rem;
         color: $text-color2;
+        font-weight: 700;
 
         @include screen(md) {
             font-size: 1.8rem;
@@ -76,14 +75,58 @@
     }
 
     &__title {
+        margin-top: 30px;
         font-size: 8rem;
         font-weight: bold;
         color: $text-color2;
         @include screen(md) {
+            margin-top: 20px;
             font-size: 3.4rem;
         }
     }
+
+    &__guest-label {
+        margin-top: 80px;
+        font-weight: 600;
+        font-size: 2.8rem;
+        color: $text-color2;
+        font-family: "Open Sans", sans-serif;
+        @include screen(md) {
+            margin-top: 50px;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__guest-name {
+        margin-top: 30px;
+        font-family: "Oooh Baby", cursive;
+        font-weight: 700;
+        font-size: 6rem;
+        color: $text-color2;
+        position: relative;
+
+        &::after {
+            content: "";
+            height: 2px;
+            width: calc(100% + 100px);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom: 2px dotted #fff;
+            @include screen(md) {
+                width: 300px;
+            }
+        }
+        // text-decoration: underline;
+        @include screen(md) {
+            margin-top: 10px;
+            font-size: 3.2rem;
+        }
+    }
+
     &__subtitle {
+        margin-top: 30px;
         font-size: 2.4rem;
         color: $text-color2;
         @include screen(md) {
@@ -92,12 +135,14 @@
     }
 
     &__cta {
+        margin-top: 30px;
         padding: 16px 52px;
         border: 1px solid #fff;
         background-color: transparent;
-        font-size: 2.4rem;
+        font-size: 2rem;
         border-radius: 20px;
         color: $text-color2;
+        font-weight: 500;
         &:hover {
             background-color: rgba(255, 255, 255, 0.1);
             color: $text-color2;
@@ -105,7 +150,8 @@
 
         @include screen(md) {
             margin-top: 40px;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+            padding: 12px 40px;
         }
     }
 }
@@ -172,7 +218,7 @@
         width: 100%;
         border-radius: 30px;
         overflow: hidden;
-        border: 20px solid #fff;
+        border: 10px solid #fff;
         background-color: #fff;
         @include screen(md) {
             border: 10px solid #fff;
