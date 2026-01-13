@@ -1122,5 +1122,48 @@ input:-webkit-autofill {
     transform: translate(-50%, -50%) rotate(-45deg) scale(0.6);
   }
 }
+.audio {
+  background-color: #ee8584;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1000000;
+  box-shadow: 0 0 5px 5px #ee8584;
+  border: 2px solid #fff;
+  animation: audio 1s infinite;
+}
+@media (max-width: 767.98px) {
+  .audio {
+    bottom: 30px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+  }
+}
+.audio__icon {
+  width: 25px;
+}
+@media (max-width: 767.98px) {
+  .audio__icon {
+    width: 20px;
+  }
+}
+
+@keyframes audio {
+  0%, 100% {
+    box-shadow: 0 0 5px 5px #ee8584;
+  }
+  50% {
+    box-shadow: 0 0 10px 5px #ee8584;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
