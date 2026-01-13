@@ -448,6 +448,10 @@
 .reply {
     padding: 80px 0px;
 
+    @include screen(md) {
+        padding: 40px 0;
+    }
+
     &__inner {
         margin: 0px auto;
         max-width: 700px;
@@ -506,6 +510,11 @@
 
 .album {
     padding: 80px 0;
+    background-color: $primary-color1;
+
+    @include screen(md) {
+        padding: 40px 0;
+    }
 
     &__inner {
         text-align: center;
@@ -514,22 +523,118 @@
     &__heading {
         font-size: 4.4rem;
         margin-bottom: 40px;
-        color: $primary-color1;
+        color: #fff;
         @include screen(md) {
             font-size: 3rem;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__top {
+        margin-bottom: 30px;
+        @include screen(md) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__group {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        gap: 20px;
+
+        @include screen(lg) {
+            padding: 10px;
+            gap: 10px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        @include screen(lg) {
+            gap: 10px;
+        }
+
+        & span {
+            font-size: 70px;
+            font-family: "Oooh Baby", cursive;
+            color: $primary-color1;
+            @include screen(lg) {
+                font-size: 30px;
+            }
+        }
+    }
+
+    &__wrap {
+        width: 80%;
+        margin: 0 auto;
+
+        @include screen(lg) {
+            width: 100%;
+        }
+    }
+
+    &__general {
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    &__text-group {
+        padding: 60px 120px 40px 120px;
+
+        @include screen(lg) {
+            padding: 20px 30px 10px 30px;
+        }
+    }
+
+    &__text {
+        font-size: 30px;
+        font-weight: 600;
+        color: $primary-color1;
+        font-family: "Oooh Baby", cursive;
+
+        @include screen(lg) {
+            font-size: 1.6rem;
+            font-weight: 500;
         }
     }
 
     &__list {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+
+        @include screen(lg) {
+            grid-template-columns: 1fr 1fr;
+            padding: 10px;
+            gap: 10px;
+        }
     }
     &__item {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 25px 10px rgba(100, 100, 100, 0.14);
 
+        @include screen(lg) {
+            border-radius: 5px;
+        }
     }
 
     &__image {
         width: 100%;
         display: block;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+
+        &--big {
+            aspect-ratio: 6 / 4;
+        }
     }
 }

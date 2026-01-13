@@ -30,7 +30,7 @@
         <!-- js -->
         <script src="js/jquery.min.js"></script>
     </head>
-    <body style="height: 5000px">
+    <body>
         <header></header>
 
         <section class="hero">
@@ -56,7 +56,7 @@
                     <!-- <p class="hero__subtitle">31 tháng 12 2025</p> -->
                     <p class="hero__guest-label">Trân Trọng Kính Mời:</p>
                     <p class="hero__guest-name">Nguyễn Thái Dương</p>
-                    <a href="#reply" class="hero__cta">GỬI LỜI CHÚC</a>
+                    <a href="#reply" class="hero__cta d-md-none">GỬI LỜI CHÚC</a>
                 </div>
             </div>
         </section>
@@ -143,16 +143,20 @@
                         <h2 class="reply__heading">Xác Nhận Tham Dự</h2>
 
                         <div class="reply__input-wrap">
-                            <input type="text" class="reply__input" placeholder="Tên của bạn là gì?"/>
+                            <input type="text" class="reply__input" placeholder="Tên của bạn là gì?" />
                         </div>
                         <div class="reply__input-wrap">
-                            <input type="text" class="reply__input" placeholder="Bạn là gì của Dâu Rể nhỉ?"/>
+                            <input type="text" class="reply__input" placeholder="Bạn là gì của Dâu Rể nhỉ?" />
                         </div>
                         <div class="reply__input-wrap">
-                            <input type="text" class="reply__input" placeholder="Gửi lời chúc của bạn đến Dẩu Rể nhé!"/>
+                            <input
+                                type="text"
+                                class="reply__input"
+                                placeholder="Gửi lời chúc của bạn đến Dẩu Rể nhé!"
+                            />
                         </div>
                         <div class="reply__input-wrap">
-                            <input type="text" class="reply__input" placeholder="Bạn có tham dự không?"/>
+                            <input type="text" class="reply__input" placeholder="Bạn có tham dự không?" />
                         </div>
                         <div class="reply__btn">Gửi xác nhận</div>
                     </form>
@@ -164,29 +168,47 @@
             <div class="container">
                 <div class="album__inner">
                     <h2 class="album__heading">Album Hình Cưới</h2>
-                    <div class="album__list">
-                        <figure class="album__item">
-                            <img class="album__image" src="./images/couple-1.jpg" alt="">
-                        </figure>
-                        <figure class="album__item">
-                            <img class="album__image" src="./images/couple-1.jpg" alt="">
-                        </figure>
-                        <figure class="album__item">
-                            <img class="album__image" src="./images/couple-1.jpg" alt="">
-                        </figure>
-                        <figure class="album__item">
-                            <img class="album__image" src="./images/couple-1.jpg" alt="">
-                        </figure>
-                        <figure class="album__item">
-                            <img class="album__image" src="./images/couple-1.jpg" alt="">
-                        </figure>
-                        <figure class="album__item">
-                            <img class="album__image" src="./images/couple-1.jpg" alt="">
-                        </figure>
-                        <figure class="album__item">
-                            <img class="album__image" src="./images/couple-1.jpg" alt="">
-                        </figure>
-                       
+                    <div class="album__wrap">
+                        <div class="album__top">
+                            <div class="album__group">
+                                <div class="album__content">
+                                    <span>Hải</span>
+                                    <span>&</span>
+                                    <span>Vy</span>
+                                </div>
+                                <figure class="album__item">
+                                    <img class="album__image album__image--big" src="./images/album-0.jpeg" alt="" />
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="album__general">
+                            <div class="album__text-group">
+                                <p class="album__text">
+                                    Em không phải là điểm cuối của tình yêu, mà là động lực nguyên sơ của nó. Vì em, anh
+                                    đã yêu thế giới này.
+                                </p>
+                            </div>
+                            <div class="album__list">
+                                <figure class="album__item">
+                                    <img class="album__image" src="./images/album-1.jpg" alt="" />
+                                </figure>
+                                <figure class="album__item">
+                                    <img class="album__image" src="./images/album-2.jpg" alt="" />
+                                </figure>
+                                <figure class="album__item">
+                                    <img class="album__image" src="./images/album-3.jpg" alt="" />
+                                </figure>
+                                <figure class="album__item">
+                                    <img class="album__image" src="./images/album-4.jpg" alt="" />
+                                </figure>
+                                <figure class="album__item">
+                                    <img class="album__image" src="./images/album-5.jpg" alt="" />
+                                </figure>
+                                <figure class="album__item">
+                                    <img class="album__image" src="./images/album-6.jpg" alt="" />
+                                </figure>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
