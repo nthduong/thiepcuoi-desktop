@@ -456,25 +456,6 @@ input:-webkit-autofill {
     width: 100%;
   }
 }
-.couple__media::before {
-  content: "";
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url("../images/heart.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 1;
-}
-@media (max-width: 767.98px) {
-  .couple__media::before {
-    width: 40px;
-    height: 40px;
-  }
-}
 .couple__media::after {
   content: "";
   width: 100px;
@@ -727,11 +708,13 @@ input:-webkit-autofill {
 }
 
 .reply {
+  margin-top: 40px;
   padding: 80px 0px;
 }
 @media (max-width: 767.98px) {
   .reply {
     padding: 40px 0;
+    margin-top: 0px;
   }
 }
 .reply__inner {
@@ -787,8 +770,130 @@ input:-webkit-autofill {
   }
 }
 
+.price {
+  background-color: #fff;
+  margin-bottom: 120px;
+}
+@media (max-width: 767.98px) {
+  .price {
+    margin-bottom: 40px;
+  }
+}
+.price__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.price__heading {
+  font-size: 4.4rem;
+  margin-bottom: 40px;
+  color: #ee8584;
+}
+@media (max-width: 767.98px) {
+  .price__heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+}
+.price__desc {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
+  width: 60%;
+  color: rgb(115, 119, 123);
+}
+@media (max-width: 767.98px) {
+  .price__desc {
+    width: 80%;
+    font-size: 1.4rem;
+  }
+}
+.price__wrap {
+  margin-top: 40px;
+  display: flex;
+  gap: 80px;
+}
+@media (max-width: 991.98px) {
+  .price__wrap {
+    gap: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .price__wrap {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.price-item {
+  background: #ee8584;
+  box-shadow: 0 0 25px 10px rgba(100, 100, 100, 0.14);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 40px;
+  border-radius: 20px;
+  gap: 20px;
+}
+@media (max-width: 767.98px) {
+  .price-item {
+    padding: 20px 40px;
+  }
+}
+.price-item__heading {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+@media (max-width: 991.98px) {
+  .price-item__heading {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .price-item__heading {
+    font-size: 1.8rem;
+    margin-bottom: 0px;
+  }
+}
+.price-item__img {
+  width: 300px;
+  height: 300px;
+}
+@media (max-width: 991.98px) {
+  .price-item__img {
+    width: 150px;
+    height: 150px;
+  }
+}
+.price-item__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.price-item__text {
+  color: #fff;
+  font-size: 2rem;
+}
+@media (max-width: 991.98px) {
+  .price-item__text {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .price-item__text {
+    font-size: 1.4rem;
+  }
+}
+
 .album {
   padding: 80px 0;
+  padding-bottom: 100px;
   background-color: #ee8584;
 }
 @media (max-width: 767.98px) {
@@ -918,6 +1023,63 @@ input:-webkit-autofill {
 }
 .album__image--big {
   aspect-ratio: 6/4;
+}
+
+.heart {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #ee8584;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg) scale(0.8);
+  margin-top: 4px;
+  z-index: 1;
+  animation: beat 1s infinite;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.4);
+}
+@media (max-width: 767.98px) {
+  .heart {
+    animation: beat-md 1s infinite;
+  }
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -20px;
+  left: 0;
+}
+
+.heart::after {
+  left: 20px;
+  top: 0;
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0.7);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0.8);
+  }
+}
+@keyframes beat-md {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0.5);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0.6);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
