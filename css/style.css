@@ -1079,7 +1079,7 @@ input:-webkit-autofill {
   margin-top: 4px;
   z-index: 1;
   animation: beat 1s infinite;
-  border-radius: 8px;
+  border-radius: 0px 8px;
 }
 @media (max-width: 767.98px) {
   .heart {
