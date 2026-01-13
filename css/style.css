@@ -520,6 +520,7 @@ input:-webkit-autofill {
   font-family: "Open Sans", sans-serif;
   text-align: center;
   font-size: 1.8rem;
+  line-height: 1.4;
   width: 75%;
   color: rgb(115, 119, 123);
 }
@@ -1025,6 +1026,47 @@ input:-webkit-autofill {
   aspect-ratio: 6/4;
 }
 
+.footer {
+  background-color: #fff;
+  padding: 40px 0;
+  z-index: 100000;
+}
+@media (max-width: 767.98px) {
+  .footer {
+    padding: 20px 0;
+  }
+}
+.footer__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.footer__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.footer__text p {
+  font-size: 4.4rem;
+  color: #ee8584;
+}
+@media (max-width: 767.98px) {
+  .footer__text p {
+    font-size: 2.4rem;
+  }
+}
+.footer__text span {
+  font-size: 2.4rem;
+  color: #ee8584;
+}
+@media (max-width: 767.98px) {
+  .footer__text span {
+    font-size: 1.4rem;
+  }
+}
+
 .heart {
   position: absolute;
   width: 40px;
@@ -1037,7 +1079,6 @@ input:-webkit-autofill {
   z-index: 1;
   animation: beat 1s infinite;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.4);
 }
 @media (max-width: 767.98px) {
   .heart {
