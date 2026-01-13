@@ -576,7 +576,7 @@ input:-webkit-autofill {
 }
 @media (max-width: 767.98px) {
   .parrent {
-    gap: 20px;
+    gap: 10px;
   }
 }
 .parrent__info {
@@ -954,6 +954,7 @@ input:-webkit-autofill {
   font-size: 70px;
   font-family: "Oooh Baby", cursive;
   color: #ee8584;
+  font-weight: 600;
 }
 @media (max-width: 991.98px) {
   .album__content span {
@@ -990,7 +991,7 @@ input:-webkit-autofill {
 @media (max-width: 991.98px) {
   .album__text {
     font-size: 1.6rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 .album__list {
@@ -1128,7 +1129,7 @@ input:-webkit-autofill {
   height: 50px;
   border-radius: 50px;
   position: fixed;
-  bottom: 50px;
+  bottom: calc(50px + env(safe-area-inset-bottom));
   right: 50px;
   display: flex;
   align-items: center;
@@ -1142,7 +1143,7 @@ input:-webkit-autofill {
 }
 @media (max-width: 767.98px) {
   .audio {
-    bottom: 30px;
+    bottom: calc(30px + env(safe-area-inset-bottom));
     right: 20px;
     width: 35px;
     height: 35px;

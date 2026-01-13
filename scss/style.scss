@@ -316,7 +316,7 @@
     justify-content: center;
     gap: 120px;
     @include screen(md) {
-        gap: 20px;
+        gap: 10px;
     }
 
     &__info {
@@ -683,6 +683,7 @@
             font-size: 70px;
             font-family: "Oooh Baby", cursive;
             color: $primary-color1;
+            font-weight: 600;
             @include screen(lg) {
                 font-size: 30px;
             }
@@ -719,7 +720,7 @@
 
         @include screen(lg) {
             font-size: 1.6rem;
-            font-weight: 500;
+            font-weight: 600;
         }
     }
 
@@ -864,7 +865,7 @@
     height: 50px;
     border-radius: 50px;
     position: fixed;
-    bottom: 50px;
+    bottom: calc(50px + env(safe-area-inset-bottom));
     right: 50px;
     display: flex;
     align-items: center;
@@ -878,7 +879,7 @@
     animation: audio 1s infinite;
 
     @include screen(md) {
-        bottom: 30px;
+        bottom: calc(30px + env(safe-area-inset-bottom));
         right: 20px;
         width: 35px;
         height: 35px;
